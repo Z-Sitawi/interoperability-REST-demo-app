@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Phone number validator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="backdrop" aria-hidden="true">
+    <span class="orb orb-a"></span>
+    <span class="orb orb-b"></span>
+    <span class="orb orb-c"></span>
+  </div>
+
+  <main class="shell">
+    <div class="card">
+      <header class="card-head">
+        <h1>Validate a phone number</h1>
+        <p class="lede">Include the country code, for example +212 6 12 34 56 78.</p>
+      </header>
+
+      <form id="validate-form" class="form" autocomplete="off">
+        <label class="field" for="phone">
+          <span class="field-label">Enter phone number to validate</span>
+          <input
+            id="phone"
+            name="phone"
+            type="tel"
+            inputmode="tel"
+            placeholder="06 12 34 56 78"
+            required
+          >
+        </label>
+
+        <button id="validate-btn" class="btn" type="submit">
+          <span class="btn-text">Validate</span>
+          <span class="btn-spinner" aria-hidden="true"></span>
+        </button>
+      </form>
+    </div>
+
+    <section id="output" class="output" data-state="idle" aria-live="polite" aria-labelledby="output-title">
+      <div class="output-head">
+        <h2 id="output-title">Result</h2>
+        <span id="output-status" class="chip">Waiting</span>
+      </div>
+      <div id="output-body" class="output-body">
+        <p class="placeholder">Your validation result will appear here.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="index.js"></script>
+</body>
+</html>
