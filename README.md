@@ -19,11 +19,12 @@ A small full-stack project that validates phone numbers and uses the result to a
 ## Project structure
 
 ```
-phone-validator/
+interoperability-REST-demo-app/
 ├── frontend/          # index.html, index.css, index.js
-├── backend-node/      # Express server (port 3000)
-├── backend-flask/     # Flask server (port 3000)
-├── backend-php/       # PHP server (port 3002)
+├── NodeClient/      # Express server (port 3000)
+├── FlaskClient/     # Flask server (port 3000)
+├── PhpClient/       # PHP server (port 3002)
+├── RestPhoneValidatorService # Jakarta EE + Tomcat or WildFly (port 8080)
 └── README.md
 ```
 
@@ -62,15 +63,15 @@ Run **only one** of these. Node.js and Flask both use port 3000.
 **Node.js (Express)**
 
 ```bash
-cd backend-node
-npm install express cors
-node server.js
+cd NodeClient
+npm install
+npm start
 ```
 
 **Python (Flask)**
 
 ```bash
-cd backend-flask
+cd FlaskClient
 pip install Flask flask-cors requests
 python app.py
 ```
@@ -78,7 +79,7 @@ python app.py
 **PHP**
 
 ```bash
-cd backend-php
+cd PhpClient
 php -S localhost:3002 server.php
 ```
 
